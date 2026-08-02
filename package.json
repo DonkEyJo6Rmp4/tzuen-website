@@ -1,0 +1,9 @@
+{
+  "name": "tzuen-foundation-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/site.test.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

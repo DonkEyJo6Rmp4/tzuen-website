@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# Playwright
+.playwright-browsers/
+playwright-report/
+test-results/
+
+# Test artifacts
+tests/screenshots/
+
+# Build output（視專案而定）
+dist/

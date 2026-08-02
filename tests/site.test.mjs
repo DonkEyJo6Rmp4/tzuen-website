@@ -17,7 +17,7 @@ for (const section of ['about', 'work', 'legal', 'news', 'contact']) {
 }
 
 assert.match(html, /logo-round\.webp/);
-assert.match(html, /Tzuen\/assets\/slogan橫式白\.svg/);
+assert.match(html, /resource\/assets\/slogan橫式白\.svg/);
 assert.match(html, /財團法人佛教慈恩育幼基金/);
 assert.match(html, /Buddhist Tzuen Children’s Welfare Foundation/);
 assert.doesNotMatch(html, /calligraphy-card/);

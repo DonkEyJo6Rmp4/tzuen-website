@@ -19,3 +19,6 @@ tests/screenshots/
 
 # Build output（視專案而定）
 dist/
+
+# 不再追蹤 resource/
+resource/

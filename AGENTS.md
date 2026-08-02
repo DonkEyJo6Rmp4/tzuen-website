@@ -17,14 +17,14 @@ All work for this website project should happen inside:
 
 Current source materials:
 
-- Foundation intro: `Tzuen/Website/Tzuen/Tzuen_Intro.md`
-- Moodboard: `Tzuen/Website/Tzuen/Tzuen情緒版.png`
-- Images and documents: `Tzuen/Website/Tzuen/assets`
+- Foundation intro: `Tzuen/Website/resource/Tzuen_Intro.md`
+- Original images and documents: `Tzuen/Website/resource/assets` (local-only source material)
+- Deployable images and documents: `Tzuen/Website/public/images` and `Tzuen/Website/public/documents`
 
 Important certificate assets:
 
-- `Tzuen/Website/Tzuen/assets/重要資料_立案證書.jpg`
-- `Tzuen/Website/Tzuen/assets/重要資料_法人登記證.jpg`
+- `Tzuen/Website/resource/assets/重要資料_立案證書.jpg`
+- `Tzuen/Website/resource/assets/重要資料_法人登記證.jpg`
 
 ## Brand Direction
 
@@ -99,7 +99,8 @@ Do not change DNS or attempt production deployment unless explicitly asked.
 
 - Keep the first version simple, static, fast, and maintainable.
 - Prefer a single modern static frontend project that can host both the main site and future subdomain content.
-- Use real local assets from `Tzuen/Website/Tzuen/assets`; do not invent important facts.
+- Use real local source assets from `Tzuen/Website/resource/assets`; do not invent important facts.
+- Never reference `resource/assets` from deployable HTML, CSS, or JavaScript. Publish only approved, optimized copies under `public/`.
 - Optimize for nonprofit trust: clear identity, legal proof, contact information, donation transparency.
 - Use accessible markup, meaningful alt text, responsive design, and readable typography.
 - Preserve image filenames unless there is a strong reason to rename them.
@@ -107,6 +108,9 @@ Do not change DNS or attempt production deployment unless explicitly asked.
 ## Important Constraints
 
 - Do not expose private data beyond what the user explicitly provided.
+- Before publishing recognizable children, confirm that the foundation has valid publication consent for the intended website use.
+- Keep original high-resolution photos, scans, and editable source files in `resource/assets/`; this directory must remain ignored and untracked.
+- Do not commit secrets, private rosters, contact lists, identity documents, internal forms, or unredacted personal data.
 - Do not claim nonprofit approval, Google Workspace approval, government endorsement, or tax status beyond supplied documents.
 - If new legal, tax, or official registration wording is needed, ask the user or mark as needing verification.
 - If using maps, include both an embedded map view and a direct Google Maps link for mobile app opening.
@@ -117,15 +121,23 @@ Initial bilingual static website implemented on 2026-08-02.
 
 - Stack: dependency-free HTML, CSS, and JavaScript.
 - Main files: `index.html`, `styles.css`, `app.js`.
-- Optimized web assets: `public/images` and `public/documents`; never replace the originals in `Tzuen/assets`.
+- Optimized web assets: `public/images` and `public/documents`; never replace the local originals in `resource/assets`.
 - Hero slogan: Chinese uses the white horizontal calligraphy image only; English adds `Be the Sunshine That Warms Every Heart.` beneath it.
-- All website logos use an optimized WebP derived from `Tzuen/assets/Logo圓型.png`.
-- The Hero directly uses `Tzuen/assets/slogan橫式白.svg`; the build copies only this SVG into the deployable `dist/Tzuen/assets` path.
+- All website logos use an optimized WebP derived from `resource/assets/Logo圓型.png`.
+- The Hero uses `public/images/slogan橫式白.svg`; the normal build copies `public/` into `dist/public/`.
 - All seven service cards include approximate dates in both languages.
 - Verification: `npm test`, `npm run build`, and Playwright browser checks pass.
 - Playwright is isolated in `.venv` with Chromium in `.playwright-browsers`; both are ignored by Git.
 - Browser test: `tests/browser_check.py`, covering 1440×1000 desktop and 390×844 mobile layouts, language switching and persistence, mobile navigation, local image loading, horizontal overflow, and runtime errors.
 - Remaining: repository selection, deployment platform, and DNS.
+
+## Public Repository Rules
+
+- Treat every committed file and every Git commit as permanently public once the repository is published.
+- `resource/assets/` is local-only and must be listed in `.gitignore` before the public release.
+- Removing a file from the latest commit does not remove it from older commits. If original assets were previously committed, clean the Git history before changing the repository visibility to Public.
+- Run `git status`, inspect the staged diff, run tests, and scan for secrets and personal data before every push.
+- Git history rewriting and force-pushing are destructive operations. They require a verified backup and explicit user action; agents must not perform them automatically.
 
 Development commands:
 

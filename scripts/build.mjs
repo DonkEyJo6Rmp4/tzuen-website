@@ -13,9 +13,9 @@ for (const item of ['index.html', 'styles.css', 'app.js', 'public']) {
   cpSync(source, join(output, item), { recursive: true });
 }
 
-const sloganSource = join(root, 'resource', 'assets', 'slogan橫式白.svg');
-const sloganOutput = join(output, 'resource', 'assets', 'slogan橫式白.svg');
-mkdirSync(join(output, 'resource', 'assets'), { recursive: true });
-cpSync(sloganSource, sloganOutput);
+//const sloganSource = join(root, 'resource', 'assets', 'slogan橫式白.svg');
+//const sloganOutput = join(output, 'resource', 'assets', 'slogan橫式白.svg');
+//mkdirSync(join(output, 'resource', 'assets'), { recursive: true });
+//cpSync(sloganSource, sloganOutput);
 
 console.log(`Static site built at ${output}`);

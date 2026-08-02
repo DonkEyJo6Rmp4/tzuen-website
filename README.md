@@ -35,9 +35,9 @@ Tzuen/Website/
 ├── public/
 │   ├── images/                # 最佳化後的 Logo 與活動照片
 │   └── documents/             # 最佳化後的證書圖片
-├── Tzuen/
-│   ├── Tzuen_Intro.md         # 基金會內容來源
-│   └── assets/                # 原始照片、Logo、SVG 與證書
+├── resource/
+│   ├── Tzuen_Intro.md         # 基金會內容來源，可留在 Git
+│   └── assets/                # 原始高解析素材，只留本機、不公開
 ├── scripts/
 │   ├── build.mjs              # 建立可部署的 dist 目錄
 │   └── create_slogan.py       # 早期 slogan 圖片處理工具
@@ -183,7 +183,7 @@ npm test
 
 ### 更新照片
 
-原始素材放在 `Tzuen/assets/`，網站使用的最佳化版本放在 `public/images/`。
+原始素材放在 `resource/assets/`，網站使用的最佳化版本放在 `public/images/`。
 
 維護原則：
 
@@ -196,21 +196,21 @@ npm test
 使用 `cwebp` 轉換範例：
 
 ```bash
-cwebp -q 78 -resize 1600 0 "Tzuen/assets/原始照片.jpg" -o "public/images/網站照片.webp"
+cwebp -q 78 -resize 1600 0 "resource/assets/原始照片.jpg" -o "public/images/網站照片.webp"
 ```
 
 ### 更新 Logo 與 Hero slogan
 
-- 網站 Logo 來源：`Tzuen/assets/Logo圓型.png`。
+- 網站 Logo 原始來源：`resource/assets/Logo圓型.png`，只留本機。
 - 網站 Logo 最佳化版本：`public/images/logo-round.webp`。
-- Hero 直接使用：`Tzuen/assets/slogan橫式白.svg`。
-- `scripts/build.mjs` 會將 Hero SVG 複製到部署目錄。
+- Hero 網站素材：`public/images/slogan橫式白.svg`。
+- `npm run build` 會隨 `public/` 將 Hero SVG 複製到 `dist/public/images/`。
 
-修改 Hero 素材路徑時，要同步修改 `scripts/build.mjs` 與 `tests/site.test.mjs`。
+修改 Hero 素材路徑時，要同步修改 `index.html` 與 `tests/site.test.mjs`。
 
 ### 更新證書
 
-- 原始證書位於 `Tzuen/assets/`。
+- 原始證書位於 `resource/assets/`，只留本機。
 - 網站版本位於 `public/documents/`。
 - 立案證書目前已順時針旋轉 90 度。
 - 兩張證書在網站上使用相同大小的小型並排縮圖。
@@ -390,6 +390,38 @@ git push --force
 
 這些指令可能永久刪除尚未提交的工作或改寫遠端歷史。
 
+## Public Repository 安全原則
+
+此 repository 預計公開，因此只提交網站運作、維護與審核需要的檔案。
+
+可以提交：
+
+- HTML、CSS、JavaScript、測試、建置腳本與 Markdown 文件。
+- `public/images/` 中已壓縮且確認可公開的網站圖片。
+- `public/documents/` 中網站實際顯示的壓縮證書。
+- `public/images/slogan橫式白.svg`。
+- `resource/Tzuen_Intro.md` 等不含私人資料的內容來源。
+
+不可提交：
+
+- `resource/assets/` 原始高解析照片、Logo 與證書。
+- 未確認公開授權的兒童照片。
+- `.env`、API Key、密碼、Token、私鑰或登入資料。
+- `.venv/`、`.playwright-browsers/`、`dist/` 與測試截圖。
+- 內部企劃書、志工名冊、身分證件、保險資料或其他個資。
+
+`.gitignore` 應包含：
+
+```gitignore
+resource/assets/
+.venv/
+.playwright-browsers/
+dist/
+tests/screenshots/
+```
+
+將檔案加入 `.gitignore` 只會阻止未來提交，不會刪除舊 commit 已收錄的內容。若原始素材已推送到 GitHub，repository 轉為 Public 前仍須清理 Git 歷史。
+
 ## 提交前檢查表
 
 - `git status` 中只有本次相關檔案。
@@ -400,7 +432,7 @@ git push --force
 - `npm test` 通過。
 - `npm run build` 通過。
 - 重要版面修改已通過 Playwright。
-- 沒有提交 `.venv/`、`.playwright-browsers/`、`dist/` 或測試截圖。
+- 沒有提交 `resource/assets/`、`.venv/`、`.playwright-browsers/`、`dist/` 或測試截圖。
 - 沒有 API 金鑰、密碼、Token 或私人資料。
 
 ## 部署注意事項
@@ -421,6 +453,6 @@ git push --force
 
 - [實作規格](implementation.md)
 - [Agent 工作規則](AGENTS.md)
-- [基金會內容來源](Tzuen/Tzuen_Intro.md)
+- [基金會內容來源](resource/Tzuen_Intro.md)
 
 # tzuen-website

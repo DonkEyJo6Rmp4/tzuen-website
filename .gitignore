@@ -20,5 +20,5 @@ tests/screenshots/
 # Build output（視專案而定）
 dist/
 
-# 不再追蹤 resource/
-resource/
+# 原始高解析素材只保留於本機
+resource/assets/

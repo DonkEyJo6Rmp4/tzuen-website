@@ -196,14 +196,14 @@ npm test
 使用 `cwebp` 轉換範例：
 
 ```bash
-cwebp -q 78 -resize 1600 0 "resource/assets/原始照片.jpg" -o "public/images/網站照片.webp"
+cwebp -q 78 -resize 1600 0 "resource/assets/原始照片.jpg" -o "public/images/activity-photo.webp"
 ```
 
 ### 更新 Logo 與 Hero slogan
 
 - 網站 Logo 原始來源：`resource/assets/Logo圓型.png`，只留本機。
 - 網站 Logo 最佳化版本：`public/images/logo-round.webp`。
-- Hero 網站素材：`public/images/slogan橫式白.svg`。
+- Hero 網站素材：`public/images/slogan-horizontal-white.svg`。
 - `npm run build` 會隨 `public/` 將 Hero SVG 複製到 `dist/public/images/`。
 
 修改 Hero 素材路徑時，要同步修改 `index.html` 與 `tests/site.test.mjs`。
@@ -399,7 +399,7 @@ git push --force
 - HTML、CSS、JavaScript、測試、建置腳本與 Markdown 文件。
 - `public/images/` 中已壓縮且確認可公開的網站圖片。
 - `public/documents/` 中網站實際顯示的壓縮證書。
-- `public/images/slogan橫式白.svg`。
+- `public/images/slogan-horizontal-white.svg`。
 - `resource/Tzuen_Intro.md` 等不含私人資料的內容來源。
 
 不可提交：

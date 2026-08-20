@@ -7,7 +7,7 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "Tzuen" / "assets" / "slogan橫式.svg"
+SOURCE = ROOT / "resource" / "assets" / "slogan橫式.svg"
 OUTPUT = ROOT / "public" / "images" / "slogan-horizontal-white.webp"
 
 # Crops follow the original two vertical calligraphy columns, then reassemble

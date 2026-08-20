@@ -124,7 +124,7 @@ Initial bilingual static website implemented on 2026-08-02.
 - Optimized web assets: `public/images` and `public/documents`; never replace the local originals in `resource/assets`.
 - Hero slogan: Chinese uses the white horizontal calligraphy image only; English adds `Be the Sunshine That Warms Every Heart.` beneath it.
 - All website logos use an optimized WebP derived from `resource/assets/Logo圓型.png`.
-- The Hero uses `public/images/slogan橫式白.svg`; the normal build copies `public/` into `dist/public/`.
+- The Hero uses `public/images/slogan-horizontal-white.svg`; the normal build copies `public/` into `dist/public/`.
 - All seven service cards include approximate dates in both languages.
 - Verification: `npm test`, `npm run build`, and Playwright browser checks pass.
 - Playwright is isolated in `.venv` with Chromium in `.playwright-browsers`; both are ignored by Git.

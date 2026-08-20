@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = decodeURIComponent(new URL('..', import.meta.url).pathname);
@@ -12,17 +12,23 @@ for (const file of ['index.html', 'styles.css', 'app.js']) {
 const html = read('index.html');
 const app = read('app.js');
 
+const publicFiles = readdirSync(join(root, 'public'), { recursive: true });
+
+for (const file of publicFiles) {
+  assert.match(file, /^[\x00-\x7F]+$/, `public asset filename must use ASCII characters: ${file}`);
+}
+
 for (const section of ['about', 'work', 'legal', 'news', 'contact']) {
   assert.match(html, new RegExp(`id=["']${section}["']`), `missing #${section}`);
 }
 
 assert.match(html, /logo-round\.webp/);
-assert.match(html, /public\/images\/slogan橫式白\.svg/);
+assert.match(html, /public\/images\/slogan-horizontal-white\.svg/);
 assert.match(html, /財團法人佛教慈恩育幼基金/);
 assert.match(html, /Buddhist Tzuen Children’s Welfare Foundation/);
 assert.doesNotMatch(html, /calligraphy-card/);
-assert.match(html, /重要資料_立案證書\.webp/);
-assert.match(html, /重要資料_法人登記證\.webp/);
+assert.match(html, /foundation-establishment-certificate\.webp/);
+assert.match(html, /legal-person-registration-certificate\.webp/);
 assert.match(html, /loading="lazy"/);
 assert.match(app, /Be the Sunshine That Warms Every Heart\./);
 assert.match(app, /讓自己成為最溫暖的陽光/);

@@ -66,7 +66,7 @@
 主視覺規格：
 
 - 原始素材：`resource/assets/slogan橫式.svg`（僅本機保存，不納入 Git 或部署）
-- 網站使用素材：`public/images/slogan橫式白.svg`
+- 網站使用素材：`public/images/slogan-horizontal-white.svg`
 - Hero 只顯示一次置中的 slogan，不重複副標、說明文字或右側墨寶卡片。
 - 原始 SVG 約 47 MB，且內含 NUL 異常字元造成瀏覽器無法完整渲染，因此不直接提供給瀏覽器；原檔完整保留。
 - 中文版只顯示白色橫式墨寶縮圖；英文版在墨寶下方淡淡顯示 `Be the Sunshine That Warms Every Heart.`。
@@ -512,7 +512,7 @@ DNS 注意事項：
 - 瀏覽器驗收腳本：`tests/browser_check.py`；驗收截圖輸出至 `tests/screenshots/`（不納入 Git）。
 - 品牌修正：所有網站 Logo 改用 `Logo圓型.png` 的 192px WebP 版本；正式名稱統一為「財團法人佛教慈恩育幼基金」／`Buddhist Tzuen Children’s Welfare Foundation`；Footer slogan 改為「教育・文化・慈善，讓自己成為最溫暖的陽光」；立案證書順時針旋轉 90 度。
 - Hero 使用從原始墨寶資料重組的透明白色橫式縮圖；英文版只加一行淡色 slogan。Our Work 標題改為 `Care Through Every Season`，服務卡介紹完整顯示，立案證書縮圖改為跨欄放大。
-- Hero 最終使用 `public/images/slogan橫式白.svg`；立案證書與法人登記證改為同尺寸、小型雙欄並排縮圖。
+- Hero 最終使用 `public/images/slogan-horizontal-white.svg`；立案證書與法人登記證改為同尺寸、小型雙欄並排縮圖。
 
 ## 16. Public Repository 素材與安全策略
 
@@ -529,5 +529,5 @@ DNS 注意事項：
 
 - 確認 `resource/assets/` 仍存在於本機，但不出現於 Git 追蹤清單。
 - 檢查所有 staged diff，不含密碼、token、名冊、個資或未授權素材。
-- 執行 `npm test` 與 `npm run build`，並確認 `dist/public/images/slogan橫式白.svg` 存在。
+- 執行 `npm test` 與 `npm run build`，並確認 `dist/public/images/slogan-horizontal-white.svg` 存在。
 - 清除舊 Git 歷史後，再進行最後一次公開資料與檔案大小檢查。

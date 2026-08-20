@@ -8,13 +8,13 @@ const content = {
     newsEyebrow: '最新消息', newsTitle: '網站建置中，請耐心等候', newsBody: '更多基金會活動與公告將陸續更新。現在可先前往 Facebook 查看近期動態。', visitFacebook: '前往 Facebook', supportEyebrow: '支持慈恩', supportTitle: '成為最溫暖的陽光', supportBody: '每一份支持，都能轉化成孩子的學習機會、生活照顧與被陪伴的時光。', postalLabel: '郵政劃撥', accountName: '戶名：佛教慈恩育幼基金會', invoiceLabel: '愛心捐電子發票', invoiceNote: '輸入愛心碼即可捐贈', onlineDonation: '前往線上捐款', contactEyebrow: '聯絡我們', contactTitle: '歡迎與我們聯繫', phoneLabel: '電話', addressLabel: '地址', address: '800 高雄市新興區仁愛一街 296 號',
     brandFull: '財團法人佛教慈恩育幼基金', officialDomain: 'tzuen.org 為財團法人佛教慈恩育幼基金會（統一編號：76201061）官方網域', footerMission: '教育・文化・慈善，讓自己成為最溫暖的陽光。',
     services: [
-      { number: '01', date: '全年持續', title: '育幼院與弱勢兒少長期關懷', description: '透過定期關懷、生活物資、節慶支持與學習活動，長期支持育幼院、安置機構及有需要的孩子。', image: '送愛育幼院2.webp' },
-      { number: '02', date: '全年・寒暑假加開活動', title: '兒童教育與成長陪伴', description: '以團隊任務、人際溝通與成長活動，幫助孩子累積成功經驗，建立自信與自我價值。', image: '夏令營1.webp' },
-      { number: '03', date: '寒假 1–2 月・暑假 7–8 月', title: '冬夏令營與兒童營隊', description: '用團隊合作、品格教育、創意體驗與成果分享，為孩子創造安全而多元的假期學習。', image: '夏令營3.webp' },
-      { number: '04', date: '全年依需求・寒暑假為主', title: '偏鄉教育服務', description: '串聯志工、義務老師與地方社區，把兒童課程帶進教育資源不足的地區。', image: '夏令營4.webp' },
-      { number: '05', date: '每年約 10–11 月', title: '獎助學金與學習支持', description: '支持高屏地區育幼院院生持續就學、探索技能與發展方向，增加未來自立的選擇。', image: '獎助學金2.webp' },
-      { number: '06', date: '每年 12 月至農曆年前', title: '核棗糕義賣與新年關懷', description: '將年節義賣所得化為育幼院院生的紅包與加菜金，讓一份心意成為新年祝福。', image: '核棗糕義賣.webp' },
-      { number: '07', date: '中元普渡後・約 9 月', title: '白米與民生物資關懷', description: '募集、整理並依需求發放白米與民生物資，讓社會捐助真正送到需要的人手中。', image: '白米發放1.webp' }
+      { number: '01', date: '全年持續', title: '育幼院與弱勢兒少長期關懷', description: '透過定期關懷、生活物資、節慶支持與學習活動，長期支持育幼院、安置機構及有需要的孩子。', image: 'children-home-visit-2.webp' },
+      { number: '02', date: '全年・寒暑假加開活動', title: '兒童教育與成長陪伴', description: '以團隊任務、人際溝通與成長活動，幫助孩子累積成功經驗，建立自信與自我價值。', image: 'summer-camp-1.webp' },
+      { number: '03', date: '寒假 1–2 月・暑假 7–8 月', title: '冬夏令營與兒童營隊', description: '用團隊合作、品格教育、創意體驗與成果分享，為孩子創造安全而多元的假期學習。', image: 'summer-camp-3.webp' },
+      { number: '04', date: '全年依需求・寒暑假為主', title: '偏鄉教育服務', description: '串聯志工、義務老師與地方社區，把兒童課程帶進教育資源不足的地區。', image: 'summer-camp-4.webp' },
+      { number: '05', date: '每年約 10–11 月', title: '獎助學金與學習支持', description: '支持高屏地區育幼院院生持續就學、探索技能與發展方向，增加未來自立的選擇。', image: 'scholarship-award-2.webp' },
+      { number: '06', date: '每年 12 月至農曆年前', title: '核棗糕義賣與新年關懷', description: '將年節義賣所得化為育幼院院生的紅包與加菜金，讓一份心意成為新年祝福。', image: 'walnut-date-cake-fundraiser.webp' },
+      { number: '07', date: '中元普渡後・約 9 月', title: '白米與民生物資關懷', description: '募集、整理並依需求發放白米與民生物資，讓社會捐助真正送到需要的人手中。', image: 'rice-distribution-1.webp' }
     ]
   },
   en: {
@@ -24,15 +24,15 @@ const content = {
     workEyebrow: 'Our Work', workTitle: 'Care Through Every Season', workIntro: 'From year-round companionship to seasonal programs, each action responds to the real needs of children, families, and communities.',
     legalEyebrow: 'Trust & Transparency', legalTitle: 'Legally established and transparent', legalBody: 'Buddhist Tzuen Children’s Welfare Foundation is legally registered by Kaohsiung City Government to advance child education, care, and social charity.', orgNameLabel: 'Organization', orgName: 'Buddhist Tzuen Children’s Welfare Foundation', registrationLabel: 'Registration No.', locationLabel: 'Location', location: 'Xinxing District, Kaohsiung', establishmentCertificate: 'Establishment certificate・View', legalCertificate: 'Legal-person registration・View',
     newsEyebrow: 'Latest News', newsTitle: 'Our website is under construction', newsBody: 'More foundation updates and announcements will be published soon. Visit Facebook for our recent activities.', visitFacebook: 'Visit Facebook', supportEyebrow: 'Support Tzuen', supportTitle: 'Be the Sunshine That Warms Every Heart.', supportBody: 'Every contribution becomes a learning opportunity, daily support, and meaningful time with a child.', postalLabel: 'Postal transfer', accountName: 'Account: 佛教慈恩育幼基金會', invoiceLabel: 'E-invoice donation code', invoiceNote: 'Enter this code to donate your receipt', onlineDonation: 'Donate Online', contactEyebrow: 'Contact Us', contactTitle: 'We would love to hear from you', phoneLabel: 'Phone', addressLabel: 'Address', address: 'No. 296, Ren’ai 1st St., Xinxing Dist., Kaohsiung 800, Taiwan',
-    brandFull: 'Buddhist Tzuen Children’s Welfare Foundation', officialDomain: 'tzuen.org is the official domain of Buddhist Tzuen Children’s Welfare Foundation (Tax ID: 76201061).', footerMission: 'Education・Culture・Charity. Be the Sunshine That Warms Every Heart.',
+    brandFull: 'Buddhist Tzuen Children’s Welfare Foundation', officialDomain: 'tzuen.org is the Foundation’s official domain (Tax ID: 76201061).', footerMission: 'Education・Culture・Charity. Be the Sunshine That Warms Every Heart.',
     services: [
-      { number: '01', date: 'Year-round', title: 'Long-term Child & Youth Care', description: 'We support residential care institutions and children in need through regular visits, daily supplies, seasonal support, and learning activities.', image: '送愛育幼院2.webp' },
-      { number: '02', date: 'Year-round・More during school breaks', title: 'Education & Growth', description: 'Team challenges, communication, and growth activities help children build confidence, resilience, and positive experiences.', image: '夏令營1.webp' },
-      { number: '03', date: 'Winter Jan–Feb・Summer Jul–Aug', title: 'Winter & Summer Camps', description: 'Teamwork, character education, creative experiences, and sharing create a safe and enriching holiday program.', image: '夏令營3.webp' },
-      { number: '04', date: 'As needed・Mainly school breaks', title: 'Rural Education Outreach', description: 'We connect volunteers, educators, and communities to bring learning programs to areas with fewer educational resources.', image: '夏令營4.webp' },
-      { number: '05', date: 'Around October–November', title: 'Scholarships & Learning Support', description: 'Scholarships help youth in residential care continue education, develop practical skills, and build pathways toward independence.', image: '獎助學金2.webp' },
-      { number: '06', date: 'December to Lunar New Year', title: 'Charity Sale & New Year Care', description: 'Proceeds from our annual walnut-date cake sale provide New Year gifts and holiday meals for children in residential care.', image: '核棗糕義賣.webp' },
-      { number: '07', date: 'After Ghost Festival・Around September', title: 'Rice & Essential Supplies', description: 'Donated rice and household essentials are carefully organized and distributed according to verified community needs.', image: '白米發放1.webp' }
+      { number: '01', date: 'Year-round', title: 'Long-term Child & Youth Care', description: 'We support residential care institutions and children in need through regular visits, daily supplies, seasonal support, and learning activities.', image: 'children-home-visit-2.webp' },
+      { number: '02', date: 'Year-round・More during school breaks', title: 'Education & Growth', description: 'Team challenges, communication, and growth activities help children build confidence, resilience, and positive experiences.', image: 'summer-camp-1.webp' },
+      { number: '03', date: 'Winter Jan–Feb・Summer Jul–Aug', title: 'Winter & Summer Camps', description: 'Teamwork, character education, creative experiences, and sharing create a safe and enriching holiday program.', image: 'summer-camp-3.webp' },
+      { number: '04', date: 'As needed・Mainly school breaks', title: 'Rural Education Outreach', description: 'We connect volunteers, educators, and communities to bring learning programs to areas with fewer educational resources.', image: 'summer-camp-4.webp' },
+      { number: '05', date: 'Around October–November', title: 'Scholarships & Learning Support', description: 'Scholarships help youth in residential care continue education, develop practical skills, and build pathways toward independence.', image: 'scholarship-award-2.webp' },
+      { number: '06', date: 'December to Lunar New Year', title: 'Charity Sale & New Year Care', description: 'Proceeds from our annual walnut-date cake sale provide New Year gifts and holiday meals for children in residential care.', image: 'walnut-date-cake-fundraiser.webp' },
+      { number: '07', date: 'After Ghost Festival・Around September', title: 'Rice & Essential Supplies', description: 'Donated rice and household essentials are carefully organized and distributed according to verified community needs.', image: 'rice-distribution-1.webp' }
     ]
   }
 };

@@ -37,6 +37,12 @@ def check_page(page, name: str) -> None:
         assert page.locator("footer").inner_text().count(
             "Buddhist Tzuen Children’s Welfare Foundation"
         ) == 1
+        official_domain = page.locator('[data-i18n="officialDomain"]')
+        assert official_domain.is_visible()
+        assert official_domain.inner_text() == (
+            "tzuen.org is the Foundation’s official domain (Tax ID: 76201061)."
+        )
+        assert official_domain.evaluate("element => getComputedStyle(element).display") != "none"
         assert page.locator("#service-grid .service-card").count() == 7
         page.reload(wait_until="networkidle")
         assert page.locator("h1").inner_text() == "Be the Sunshine That Warms Every Heart."

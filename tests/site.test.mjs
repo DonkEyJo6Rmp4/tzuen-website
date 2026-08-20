@@ -36,5 +36,7 @@ assert.match(app, /localStorage/);
 assert.equal((app.match(/date:/g) || []).length, 14, 'seven dated services required in each language');
 assert.match(html, /04771311/);
 assert.match(html, /tzuen76201061@gmail\.com/);
+assert.match(html, /class="official-domain" data-i18n="officialDomain"/);
+assert.match(app, /tzuen\.org is the Foundation’s official domain \(Tax ID: 76201061\)\./);
 
 console.log('Static website checks passed.');

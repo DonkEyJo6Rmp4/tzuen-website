@@ -140,7 +140,6 @@ footer { display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; align-i
 .footer-brand p, footer > p { margin: 0; }
 .footer-brand strong, .footer-brand small { display: block; }
 .footer-brand small { color: rgba(255,255,255,.45); }
-html[lang="en"] .footer-brand small { display: none; }
 
 @keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
